@@ -1,0 +1,48 @@
+  /******************** Media queries ********************/
+  /* Medium devices (tablets, less/equal than 1024px) */
+  @media screen and (min-width: 770px) {
+    .tuto {
+      width: 100%;
+    }
+  }
+  /* Big devices (Desktop, more than 1024px) */
+  @media screen and (min-width: 1024px) {
+    .logo{
+        padding: 35px 89px 13px 89px;
+    }
+    .fonctionnement {
+      padding: 50px clamp(2px, 5%, 180px);
+    }
+    .tuto {
+      flex-direction: row;
+    }
+    .restaurant {
+      padding: 0px 180px;
+      box-sizing: border-box;
+    }
+    .restaurant-conteneur {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 50px 100px;
+      margin-bottom: 30px;
+    }
+    .restaurant-card {
+      width: calc(50% - 50px);
+      max-width: none;
+    }
+}
+  /* Big devices (Desktop, more than 1024px) */
+  @media screen and (min-width: 1024px) {
+    .footer {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      height: 114px;
+    }
+    .footer-liste {
+      gap: 20px;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
