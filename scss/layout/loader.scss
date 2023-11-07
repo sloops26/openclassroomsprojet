@@ -5,7 +5,7 @@
     background-color: #99E2D0;
     height: 100vh;
     inset: 0;
-    z-index: 3;
+    z-index: 3;/*emplacement du loader au dessus de la page d'accueil*/
     opacity: 0.9;
     animation: disappear 200ms 3s;
     transform-origin: top;
@@ -15,35 +15,35 @@
   }
   @keyframes disappear {
     0%{
-      transform: scale(1);
+      transform: scale(1);/*apparition*/
     }
     100%{
-      transform: scale(0);
+      transform: scale(0);/*disparition*/
     }
   }
-  $cd-bars: #FF79DA ;
+  $cd-bars: #FF79DA ;/*couleur*/
   $cd-bars-inv: #9356dc;
   $size: 3vh;
-  $anim-dur: 1000ms;
-  $anim-delay: $anim-dur / 5;
+  $anim-dur: 1000ms;/*durée animation*/
+  $anim-delay: $anim-dur / 5;/*delai*/
   
   .load {
-    width: $size*10;
+    width: $size*10;/*taille*/
     height: $size*7.5;
-    display: flex;
+    display: flex;/*posiotionnemnt*/
     justify-content: space-evenly;
       &__bar {
-        background-color: $cd-bars;
+        background-color: $cd-bars;/*couleur barre*/
         height: 100%;
         width: $size;
-          animation: bars $anim-dur backwards infinite ease-in-out alternate;
+          animation: bars $anim-dur backwards infinite ease-in-out alternate;/*backwards=etendre les valeurs de depart*//*boulce infini*/
           @for $i from 1 through 5 {
               &--#{$i} {
-                  animation-delay: $anim-delay * $i;
+                  animation-delay: $anim-delay * $i;/*boucle animation avec delai de lancement*/
               }
               &--#{$i}-inv {
                   animation-delay: $anim-delay * $i;
-                  animation-direction: alternate-reverse;
+                  animation-direction: alternate-reverse;/*boucle animatyion inverse*/
                   background-color: $cd-bars-inv;
               }
           }
@@ -53,56 +53,10 @@
   
   @keyframes bars {
     0% {
-        transform: scaleY(0.5);
+        transform: scaleY(0.5);/*animation transformation verticale de la barre*/
         
     }
     100% {
         transform: scaleY(1.0);
     }
-  }
-  .load__bar--1 {
-    animation-delay: 200ms;
-  }
-  .load__bar--1-inv {
-    animation-delay: 200ms;
-    animation-direction: alternate-reverse;
-    animation-fill-mode: forwards;
-    background:#9356dc;
-  }
-  .load__bar--2 {
-    animation-delay: 400ms;
-  }
-  .load__bar--2-inv {
-    animation-delay: 400ms;
-    animation-direction: alternate-reverse;
-    animation-fill-mode: forwards;
-    background: #9356dc;
-  }
-  .load__bar--3 {
-    animation-delay: 600ms;
-    
-  }
-  .load__bar--3-inv {
-    animation-delay: 600ms;
-    animation-direction: alternate-reverse;
-    animation-fill-mode: forwards;
-    background: #9356dc;
-  }
-  .load__bar--4 {
-    animation-delay: 800ms;
-  }
-  .load__bar--4-inv {
-    animation-delay: 800ms;
-    animation-direction: alternate-reverse;
-    animation-fill-mode: forwards;
-    background: #9356dc;
-  }
-  .load__bar--5 {
-    animation-delay: 1000ms;
-  }
-  .load__bar--5-inv {
-    animation-delay: 1000ms;
-    animation-direction: alternate-reverse;
-    animation-fill-mode: forwards;
-    background: #9356dc;
   }

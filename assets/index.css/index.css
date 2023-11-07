@@ -1,13 +1,16 @@
+@charset "UTF-8";
 :root {
   --main-bg-color: #F6F6F6;
   --primary-color: #9356DC;
   --bg-color-green: #99e2d0;
   --bg-color-blue: #89c8fa;
+  /*couleur du projet*/
   --bg-color-dark-grey: #353535;
   --bg-color-grey-2: #Eaeaea;
   --bg-color--dark-blue: #003a68;
   --green-font: #008766; }
 
+/*corps de la page*/
 * {
   margin: 0;
   padding: 0;
@@ -31,18 +34,21 @@ body {
   width: 100%; }
 
 .max {
-  max-width: 1440px; }
+  max-width: 1440px;
+  /*ecran max 1440px*/ }
 
 .header {
   width: 100%;
   display: flex;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  /*colonne =recherche en dessous logo*/ }
 
 .logo {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  /*logo center,ombre*/
   width: 100%;
   margin: 0;
   padding: 14px 89px 13px 89px;
@@ -51,41 +57,53 @@ body {
 .logo-img {
   display: flex;
   padding: 0 19px 0 16px;
+  /*taille image*/
   width: 162px; }
 
 .location {
   display: flex;
   flex-direction: row;
+  /*sens direction ligne pour icon et ville*/
   justify-content: center;
   align-items: center;
   background-color: var(--bg-color-grey-2);
+  /*fond gris*/
   height: 50px;
   box-sizing: border-box;
   margin: 0;
   width: 100%;
-  gap: 17px; }
+  gap: 17px;
+  /*espace entre icon et ville*/ }
 
 .location-logo {
-  font-size: 16px; }
+  font-size: 16px;
+  /*taille icon*/ }
 
 .location-ville {
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
+  /*hauteur de la boite de la ligne*/
   outline: none;
+  /*supprime style par default*/
   border: none;
+  /*ville=pas de fond couleur,pas de bordure*/
   background: none; }
 
+/*texte*/
 .explorer {
   display: flex;
   flex-direction: column;
+  /*sens direction texte 1en dessous l'autre*/
   align-items: center;
-  background-color: var(--main-bg-color); }
+  background-color: var(--main-bg-color);
+  /*fond couleur gris clair*/ }
 
 .explorer-titre {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
+  /*taille emplacement reservez votre menu*/
   margin-top: 39px;
   width: 75%;
   padding: 2px 15px 15px 15px; }
@@ -94,6 +112,7 @@ body {
   font-size: 18px;
   font-weight: 300;
   text-align: center;
+  /*taille emplacement couleur decouvrez des restaurants*/
   color: var(--bg-color-dark-grey);
   margin-bottom: 27px;
   width: 85%;
@@ -101,48 +120,62 @@ body {
 
 .fonctionnement {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  /*sens de direction colonne*/ }
 
 .fonctionnement-titre {
   font-size: 24px;
   font-weight: 700;
   margin-top: 48px;
+  /* taille;emplacement du titre*/
   margin-left: 20px;
   margin-bottom: 26px; }
 
 .tuto {
   display: flex;
   flex-direction: column;
+  /* emplacement des boutons colonne pour mobile*/
   align-items: center;
   gap: 25px;
+  /* espacement entre chaque bouton*/
   margin-bottom: 68px; }
 
 .conteneur {
   width: 80%;
+  /*taille et position des boutons*/
   position: relative; }
 
 .badge {
   position: absolute;
   top: 25px;
+  /*positionnement du cercle sur le bouton*/
   left: -12px;
-  z-index: 1; }
+  z-index: 1;
+  /*postionnement en fond*/ }
 
 .chiffre {
   position: absolute;
   left: -5px;
+  /*posiutionnement du chiffre dans le badge*/
   bottom: 26px;
   color: white;
-  z-index: 2; }
+  z-index: 2;
+  /*postionnement au dessus du badge*/ }
 
 .fonctionnement-bouton {
   display: flex;
   justify-content: center;
+  /*texte icon center dans bouton*/
   align-items: center;
   gap: 27px;
+  /*espacement entre texte ety icon*/
   position: relative;
   border-radius: 20px;
+  /*arrondi*/
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  /*ombre*/
   background-color: var(--main-bg-color);
+  /*fond couleur*/
   height: 73px;
   width: 100%;
   min-width: 123px;
@@ -151,14 +184,18 @@ body {
   font-weight: 500; }
 
 .icon {
-  color: #7e7e7e; }
+  color: #7e7e7e;
+  /*couleur icon*/ }
 
 .icon:hover {
-  color: #9356dc; }
+  color: #9356dc;
+  /*changement couleur passage souris*/ }
 
+/*page d'accueil cartes restaurants*/
 .restaurant {
   display: flex;
   flex-direction: column;
+  /*sens de direction section restaurant ,fond couleur,remplis l'ecran*/
   align-items: center;
   width: 100%;
   background-color: var(--main-bg-color);
@@ -169,6 +206,7 @@ body {
   align-self: flex-start;
   font-size: 24px;
   font-weight: 700;
+  /*emplacelent du titre*/
   margin-left: 20px;
   margin-top: 54px;
   margin-bottom: 26px; }
@@ -176,47 +214,60 @@ body {
 .restaurant-conteneur {
   display: flex;
   flex-direction: column;
+  /*emplacement des cartes +espacement entre chaque*/
   align-items: center;
   gap: 18px;
   width: 100%; }
 
 .restaurant-card {
+  /*chaque carte*/
   position: relative;
+  /*pour le nouveau et le coeur*/
   display: flex;
   flex-direction: column;
   width: 95%;
+  /* direction,taille,hauteur de la carte*/
   max-width: 600px;
   border-radius: 15px;
   background-color: white;
   height: auto; }
 
+/* positionnement badge bouveau*/
 .nouveau {
   position: absolute;
+  /*positionnement dans la carte*/
   right: 15px;
   top: 15px;
   display: flex;
   align-items: center;
+  /*texte center*/
   justify-content: center;
   width: 80px;
+  /*hauteur taille badge*/
   height: 29px;
   font-size: 14px;
   font-weight: 500;
   background-color: var(--bg-color-green);
+  /*fond vert*/
   color: var(--green-font); }
 
 .image {
   width: 100%;
   height: 231px;
   object-fit: cover;
+  /*remplis tt la boite*/
   align-self: stretch;
+  /*aggrandissement sur l'axe*/
   margin-bottom: 16px;
   flex-shrink: 0;
+  /*compression de l'image selon taille ecran*/
   border-top-left-radius: 15px;
   border-top-right-radius: 15px; }
 
 .card-titre {
   display: flex;
   justify-content: flex-start;
+  /*positionnement taille nom resto*/
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
@@ -225,45 +276,53 @@ body {
 .card-desc {
   font-size: 17px;
   font-weight: 300;
+  /*taille positionnement description*/
   margin-bottom: 12px;
   padding-left: 13px; }
 
 .coeur {
   padding: 2px;
   position: absolute;
-  font-size: 28px;
+  /*positionnement*/
   right: 30px;
   bottom: 20px;
-  z-index: 1;
   overflow: clip;
   transition: all 0.5s;
   opacity: 1;
   font-size: 22px;
   -webkit-text-stroke: 2px var(--bg-color-dark-grey);
+  /*epaisseur et couleur bord du coeur*/
   background: white;
+  /*couleur du bloc*/
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text; }
+  /*couleur interieur du coeur*/ }
 
 .coeur:hover {
   font-size: 22px;
-  animation: filling-heart 1s forwards; }
+  animation: filling-heart 1s forwards;
+  /*animation coeur violet forward=mettre l'animation sur pause sur la derniere image*/ }
 
 @keyframes filling-heart {
   0% {
     transform: scale(0.9);
+    /*equivalent scalex(0.9)scaleY(0.9) reduction du coeur*/
     -webkit-text-stroke: transparent;
+    /*transparence bordure*/
     -webkit-background-clip: text;
+    /*la zone d'arriere plan s'etend dans le texte*/
     background-clip: text; }
   50% {
     transform: scale(1.4);
+    /*aggrandissement*/
     background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+    /*fond couleur*/
     opacity: 0.5;
     -webkit-text-stroke: transparent;
     -webkit-background-clip: text;
     background-clip: text; }
   100% {
     transform: scale(1);
+    /*taille dorigine=1*/
     background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
     opacity: 1;
     -webkit-text-stroke: transparent;
@@ -274,69 +333,107 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  /*emplacement section footer mobile*/
   width: 100%;
   box-sizing: border-box;
   padding: 22px 25px;
   background-color: var(--bg-color-dark-grey);
+  /*fond couleur*/
   gap: 16px; }
 
 .footer-logo {
   width: 138px;
-  filter: invert(1); }
+  filter: invert(1);
+  /* logo taille filtre inversion de couleur*/ }
 
 .footer-liste {
   gap: 7px;
   display: flex;
+  /*sens direction liste pour mobile en colonne*/
   flex-direction: column; }
 
 .footer-item {
   gap: 11px;
   display: flex;
+  /* sens direction en ligne du l'icon et du texte*/
   flex-direction: row; }
 
 .footer-icon {
-  filter: invert(1); }
+  filter: invert(1);
+  /*icon en blanc*/ }
 
 .footer-lien {
-  color: white; }
+  color: white;
+  /*lien texte en blanc*/ }
 
-/******************** Media queries ********************/
-/* Medium devices (tablets, less/equal than 1024px) */
+/**MEDIA PAGE DACCUEIL**/
+/* media queries tablette ecran min 768 max 1024px */
 @media screen and (min-width: 768px) {
   .tuto {
-    width: 100%; } }
+    width: 100%;
+    /*aggrandissemnt des boutons fonctionnement avec lecran*/ } }
 
-/* Big devices (Desktop, more than 1024px) */
+/* media queries desktop ecran min 1024px */
 @media screen and (min-width: 1024px) {
   .logo {
-    padding: 35px 89px 13px 89px; }
+    padding: 35px 89px 13px 89px;
+    /*aggrandissement div blanc du logo*/ }
   .fonctionnement {
-    padding: 50px clamp(2px, 5%, 180px); }
+    padding: 50px clamp(2px, 5%, 180px);
+    /*espacement div fonctionnement*/ }
   .tuto {
-    flex-direction: row; }
+    flex-direction: row;
+    /*positionnement bouton fonctionnment en ligne*/ }
   .restaurant {
     padding: 0px 180px;
+    /*marge sur coté gauche et droite*/
     box-sizing: border-box; }
   .restaurant-conteneur {
     flex-direction: row;
     flex-wrap: wrap;
+    /*Les éléments flexibles sont disposé sur plusieurs lignes*/
     gap: 50px 100px;
+    /*positionnement carte resto en ligne*/
     margin-bottom: 30px; }
   .restaurant-card {
     width: calc(50% - 50px);
-    max-width: none; } }
-
-/* Big devices (Desktop, more than 1024px) */
-@media screen and (min-width: 1024px) {
+    /*taille carte resto en fonction taille ecran*/
+    max-width: none; }
   .footer {
     display: flex;
     flex-direction: row-reverse;
+    /*positionnemnt du footer en sens opposé*/
     align-items: flex-end;
     height: 114px; }
   .footer-liste {
     gap: 20px;
     display: flex;
-    flex-direction: row; } }
+    /*espacement texte et en ligne*/
+    flex-direction: row; }
+  /*****PAGE RESTAURANT**/
+  .header-icon {
+    top: 30px;
+    /*positionnement retour page d'accueil*/ }
+  .resto-img {
+    height: 383px;
+    /*taille image*/ }
+  .resto-titre {
+    width: auto;
+    align-self: center;
+    /*nom resto cnter*/ }
+  .resto-article {
+    max-width: 1025px;
+    /*taille max carte*/
+    width: 100%; }
+  .resto-icon {
+    position: absolute;
+    right: 326px;
+    /*positionnement du coeur */
+    top: 39px; }
+  .resto .card {
+    width: 97%; }
+  .menu {
+    width: 80%; } }
 
 /*MEDIA PAGE RESTAURANT */
 /*media tablette*/
@@ -344,38 +441,18 @@ body {
   .menu {
     width: 90%; } }
 
-/* media ordinateur*/
-@media screen and (min-width: 1024px) {
-  .header-icon {
-    top: 30px; }
-  .resto-img {
-    height: 383px; }
-  .resto-titre {
-    width: auto;
-    align-self: center; }
-  .resto-article {
-    max-width: 1025px;
-    width: 100%; }
-  .resto-icon {
-    position: absolute;
-    right: 326px;
-    top: 39px; }
-  .resto .card {
-    width: 97%; }
-  .menu {
-    width: 80%; } }
-
 .header-icon {
   position: absolute;
   left: 25px;
+  /*positionnement icon*/
   top: 13px;
-  font-size: 30px;
-  z-index: 3; }
+  font-size: 30px; }
 
 .resto {
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  /*posionnement div menu resto image */
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -383,13 +460,16 @@ body {
 .resto-img {
   position: relative;
   width: 100%;
+  /*positionnement image taille/adaptation de la taille */
   height: 275px;
   object-fit: cover;
-  align-self: stretch; }
+  align-self: stretch;
+  /*etirement de limage*/ }
 
 .resto-article {
   width: 100%;
   background-color: var(--main-bg-color);
+  /*menu resto fond couleur,bord arrondi, sens direction colonne menu mobile*/
   position: relative;
   margin-top: -25px;
   border-top-left-radius: 25px;
@@ -403,6 +483,7 @@ body {
   align-self: flex-start;
   font-family: "Shrikhand", sans-serif;
   font-size: 28px;
+  /*positionnement ecriture nom resto*/
   font-weight: 400;
   padding-top: 32px;
   padding-left: 17px; }
@@ -410,31 +491,38 @@ body {
 .resto-icon {
   padding: 2px;
   position: absolute;
+  /*positionnement*/
   right: 42px;
   top: 39px;
-  font-size: 28px;
-  z-index: 1;
   overflow: clip;
   opacity: 1;
   font-size: 22px;
   -webkit-text-stroke: 2px var(--bg-color-dark-grey);
+  /*epaisseur et couleur bord du coeur*/
   background: white;
+  /*couleur du bloc*/
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  -webkit-text-fill-color: transparent;
+  /*couleur interieur du coeur*/ }
 
 .resto-icon:hover {
   font-size: 22px;
-  animation: filling-heart 1.3s forwards; }
+  animation: filling-heart 1.3s forwards;
+  /*animation coeur violet forward=mettre l'animation sur pause sur la derniere image*/ }
 
 @keyframes filling-heart {
   0% {
     transform: scale(0.9);
+    /*equivalent scalex(0.9)scaleY(0.9) reduction du coeur*/
     -webkit-text-stroke: transparent;
+    /*transparence bordure*/
     -webkit-background-clip: text;
+    /*la zone d'arriere plan s'etend dans le texte*/
     background-clip: text; }
   50% {
     transform: scale(1.4);
+    /*aggrandissement*/
     background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
     opacity: 0.5;
     -webkit-text-stroke: transparent;
@@ -442,6 +530,7 @@ body {
     background-clip: text; }
   100% {
     transform: scale(1);
+    /*taille dorigine*/
     background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
     opacity: 1;
     -webkit-text-stroke: transparent;
@@ -455,6 +544,7 @@ body {
   margin-top: 40px;
   width: 38px;
   height: 27px;
+  /*positionnement entree plat dessert+ couleur et taille ligne en dessous*/
   font-size: 16px;
   font-weight: 300;
   margin-left: 17px;
@@ -468,23 +558,23 @@ body {
   display: flex;
   flex-direction: row;
   height: 70px;
+  /*positionnement en ligne dans la boite du plat*/
   position: relative;
   margin-top: 12px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  transform: translateX(15px);
   animation: appearance-card 3s;
+  /*animation appartion carte avec décalage*/
   animation-fill-mode: both; }
 
-.card:hover .checkicon {
-  animation: check 0.8s 0.1s forwards; }
-
-.card:hover .card-click {
-  transition: all 0.7s ease-in-out;
-  cursor: pointer;
-  width: 30px;
-  padding: 15px; }
+@keyframes appearance-card {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 
 .child1 {
   animation-delay: 200ms; }
@@ -495,6 +585,7 @@ body {
 .child3 {
   animation-delay: 600ms; }
 
+/*delai apparition plat ouvreture de page*/
 .child4 {
   animation-delay: 800ms; }
 
@@ -516,27 +607,59 @@ body {
 .child10 {
   animation-delay: 700ms; }
 
-@keyframes appearance-card {
+.card:hover .checkicon {
+  animation: check 0.8s 0.1s forwards;
+  /*animation rotation icon*/ }
+
+@keyframes check {
   0% {
-    opacity: 0;
-    transform: translateY(20px); }
+    transform: rotate(0deg); }
   to {
-    opacity: 1;
-    transform: translateY(0); } }
+    transform: rotate(360deg); } }
+
+.checkicon {
+  color: white;
+  opacity: 1;
+  /*icon blanc*/
+  font-size: 25px; }
+
+.card-click {
+  width: 0;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  align-items: center;
+  /*icon center dans carré*/
+  justify-content: center;
+  overflow: hidden;
+  /*empeche licon de sortir*/
+  background-color: var(--bg-color-green);
+  /*carré vert avec icon*/ }
+
+.card:hover .card-click {
+  transition: all 0.7s ease-in-out;
+  /*animation carré verte plus fluide*/
+  cursor: pointer;
+  width: 30px;
+  padding: 15px; }
 
 .card-menu {
   width: 20%;
   display: flex;
   flex-direction: column;
+  /*texte lun en dessous lautre*/
   padding: 15px;
-  flex-grow: 1; }
+  flex-grow: 1;
+  /*expension de l'element*/ }
 
 .card-plat {
   font-size: 18px;
   font-weight: 500;
+  /*plat*/
   margin-bottom: 5px;
   text-overflow: ellipsis;
+  /*texte coupé ...*/
   overflow: hidden;
+  /*evite aux texte detre rogné*/
   white-space: nowrap; }
 
 .card-description {
@@ -552,67 +675,93 @@ body {
   margin-bottom: 15px;
   display: flex;
   align-items: flex-end;
+  /*positionnement prix au debut */
   font-size: 15px;
-  font-weight: 700;
-  right: 30px;
-  bottom: 18px; }
-
-.card-click {
-  width: 0;
-  border-radius: 0 15px 15px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-color: var(--bg-color-green); }
-
-.checkicon {
-  color: white;
-  opacity: 1;
-  font-size: 25px; }
-
-@keyframes check {
-  0% {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+  font-weight: 700; }
 
 /*footer*/
 .footer {
   position: relative; }
 
+/**MEDIA PAGE*/
+/* media queries tablette ecran min 768 max 1024px */
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 90%; } }
+
+/* media queries desktop ecran min 1024px */
+@media screen and (min-width: 1024px) {
+  /*****PAGE RESTAURANT**/
+  .header-icon {
+    top: 30px;
+    /*positionnement retour page d'accueil*/ }
+  .resto-img {
+    height: 383px;
+    /*taille image*/ }
+  .resto-titre {
+    width: auto;
+    align-self: center;
+    /*nom resto cnter*/ }
+  .resto-article {
+    max-width: 1025px;
+    /*taille max carte*/
+    width: 100%; }
+  .resto-icon {
+    position: absolute;
+    right: 326px;
+    /*positionnement du coeur */
+    top: 39px; }
+  .resto .card {
+    width: 97%; }
+  .menu {
+    width: 80%; } }
+
+/*bouton explorez nos restaurants page d'accueil*/
 .explorer-bouton {
   display: flex;
   align-items: center;
+  /*center texte*/
   justify-content: center;
   border-radius: 25px;
+  /*arrondi*/
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  /*ombre*/
   background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  /*fond couleur degradée*/
   margin-bottom: 57px;
   max-width: 288px;
   height: 50px;
   padding: 0px 15px;
   border: none;
+  /*pas de bordure*/
   color: white;
+  /*ecriture*/
   font-size: 16px;
   font-weight: 500;
-  transition: 0.3s all ease; }
+  transition: 0.3s all ease;
+  /*controle vitesse animation, demarrage lent puis rapide puis lent*/ }
 
 .explorer-bouton:hover {
   filter: brightness(1.1);
+  /*bouton plus claire*/
   box-shadow: 2px 6px 12px 2px rgba(0, 0, 0, 0.25);
+  /*changement ombre*/
   cursor: pointer; }
 
 /*bouton page*/
 .card-bouton {
   display: flex;
+  /*emplacement du bouton*/
   justify-content: center;
   margin-bottom: 40px; }
 
 .bouton {
   border-radius: 25px;
+  /*arrondi*/
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  /*ombre*/
   background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  /*fond couleur degradé*/
   width: 186px;
   border: none;
   color: white;
@@ -620,11 +769,14 @@ body {
   font-weight: 500;
   height: 50px;
   margin-top: 40px;
-  transition: 0.3s all ease; }
+  transition: 0.3s all ease;
+  /*vitesse animation*/ }
 
 .bouton:hover {
   filter: brightness(1.1);
+  /*bouton plus claire*/
   box-shadow: 2px 6px 12px 2px rgba(0, 0, 0, 0.25);
+  /*changement dombre*/
   cursor: pointer; }
 
 /*loader*/
@@ -634,6 +786,7 @@ body {
   height: 100vh;
   inset: 0;
   z-index: 3;
+  /*emplacement du loader au dessus de la page d'accueil*/
   opacity: 0.9;
   animation: disappear 200ms 3s;
   transform-origin: top;
@@ -643,98 +796,74 @@ body {
 
 @keyframes disappear {
   0% {
-    transform: scale(1); }
+    transform: scale(1);
+    /*apparition*/ }
   100% {
-    transform: scale(0); } }
+    transform: scale(0);
+    /*disparition*/ } }
 
+/*couleur*/
+/*durée animation*/
+/*delai*/
 .load {
   width: 30vh;
+  /*taille*/
   height: 22.5vh;
   display: flex;
+  /*posiotionnemnt*/
   justify-content: space-evenly; }
   .load__bar {
     background-color: #FF79DA;
+    /*couleur barre*/
     height: 100%;
     width: 3vh;
-    animation: bars 1000ms backwards infinite ease-in-out alternate; }
+    animation: bars 1000ms backwards infinite ease-in-out alternate;
+    /*backwards=etendre les valeurs de depart*/
+    /*boulce infini*/ }
     .load__bar--1 {
-      animation-delay: 200ms; }
+      animation-delay: 200ms;
+      /*boucle animation avec delai de lancement*/ }
     .load__bar--1-inv {
       animation-delay: 200ms;
       animation-direction: alternate-reverse;
+      /*boucle animatyion inverse*/
       background-color: #9356dc; }
     .load__bar--2 {
-      animation-delay: 400ms; }
+      animation-delay: 400ms;
+      /*boucle animation avec delai de lancement*/ }
     .load__bar--2-inv {
       animation-delay: 400ms;
       animation-direction: alternate-reverse;
+      /*boucle animatyion inverse*/
       background-color: #9356dc; }
     .load__bar--3 {
-      animation-delay: 600ms; }
+      animation-delay: 600ms;
+      /*boucle animation avec delai de lancement*/ }
     .load__bar--3-inv {
       animation-delay: 600ms;
       animation-direction: alternate-reverse;
+      /*boucle animatyion inverse*/
       background-color: #9356dc; }
     .load__bar--4 {
-      animation-delay: 800ms; }
+      animation-delay: 800ms;
+      /*boucle animation avec delai de lancement*/ }
     .load__bar--4-inv {
       animation-delay: 800ms;
       animation-direction: alternate-reverse;
+      /*boucle animatyion inverse*/
       background-color: #9356dc; }
     .load__bar--5 {
-      animation-delay: 1000ms; }
+      animation-delay: 1000ms;
+      /*boucle animation avec delai de lancement*/ }
     .load__bar--5-inv {
       animation-delay: 1000ms;
       animation-direction: alternate-reverse;
+      /*boucle animatyion inverse*/
       background-color: #9356dc; }
 
 @keyframes bars {
   0% {
-    transform: scaleY(0.5); }
+    transform: scaleY(0.5);
+    /*animation transformation verticale de la barre*/ }
   100% {
     transform: scaleY(1); } }
-
-.load__bar--1 {
-  animation-delay: 200ms; }
-
-.load__bar--1-inv {
-  animation-delay: 200ms;
-  animation-direction: alternate-reverse;
-  animation-fill-mode: forwards;
-  background: #9356dc; }
-
-.load__bar--2 {
-  animation-delay: 400ms; }
-
-.load__bar--2-inv {
-  animation-delay: 400ms;
-  animation-direction: alternate-reverse;
-  animation-fill-mode: forwards;
-  background: #9356dc; }
-
-.load__bar--3 {
-  animation-delay: 600ms; }
-
-.load__bar--3-inv {
-  animation-delay: 600ms;
-  animation-direction: alternate-reverse;
-  animation-fill-mode: forwards;
-  background: #9356dc; }
-
-.load__bar--4 {
-  animation-delay: 800ms; }
-
-.load__bar--4-inv {
-  animation-delay: 800ms;
-  animation-direction: alternate-reverse;
-  animation-fill-mode: forwards;
-  background: #9356dc; }
-
-.load__bar--5 {
-  animation-delay: 1000ms; }
-
-.load__bar--5-inv {
-  animation-delay: 1000ms;
-  animation-direction: alternate-reverse;
-  animation-fill-mode: forwards;
-  background: #9356dc; }

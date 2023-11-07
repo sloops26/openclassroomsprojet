@@ -16,6 +16,7 @@
 </head>
 
 <body class="max">
+    <!--LOADER-->
     <div class="container">
         <div class="load">
             <div class="load__bar load__bar--1"></div>
@@ -38,22 +39,26 @@
         <div class="logo">
             <img class="logo-img" src="assets/images/logo/ohmyfood.png" alt="logo de ohmyfood">
         </div>
+        <!--zone de recherche-->
         <div class="location">
             <i class="location-logo fa-sharp fa-solid fa-location-dot bouton-localisation"></i>
             <input class="location-ville" type="text" name="ville-de-recherche" value="Paris, Belleville" size="17">
         </div>
     </header>
     <main>
-        <!-- *** Main Title and Exploration Section *** -->
+        <!-- titre+texte -->
         <section class="explorer">
             <h1 class="explorer-titre">Réservez le menu qui vous convient</h1>
             <p class="explorer-soustitre">Découvrez des restaurants d'exception, selectionnés par nos soins</p>
+            <!--bouton de recherche-->
             <a class="explorer-bouton" href="#restaurants">Explorez nos restaurants</a>
         </section>
-        <!-- *** Functioning Section *** -->
+        <!-- *** Fonctionnement Section *** -->
         <section class="fonctionnement">
             <h2 class="fonctionnement-titre">Fonctionnement</h2>
+            <!--boutons-->
             <div class="tuto">
+                <!--bouton choisir un resdto-->
                 <div class="conteneur">
                     <svg class="badge" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
                         fill="none">
@@ -63,6 +68,7 @@
                     <button class="fonctionnement-bouton"><i
                             class="icon fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</button>
                 </div>
+                <!--bouton choisir menu-->
                 <div class="conteneur">
                     <svg class="badge" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
                         fill="none">
@@ -72,6 +78,7 @@
                     <button class="fonctionnement-bouton"><i class="icon fa-solid fa-list-ul"></i>Composez votre
                         menu</button>
                 </div>
+                <!--bouton degustez au resto-->
                 <div class="conteneur">
                     <svg class="badge" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
                         fill="none">
@@ -87,9 +94,12 @@
         <section id="restaurants" class="restaurant">
             <h2 class="restaurant-titre">Restaurants</h2>
             <div class="restaurant-conteneur">
+                <!--carte resto 1-->
                 <article class="restaurant-card">
+                    <!--lien vers resto-->
                     <a href="restaurants/lapalettedugout.html">
                         <span class="nouveau">Nouveau</span>
+                        <!--image lieu titre-->
                         <img class="image" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                             alt="image Restaurant La palette du goût">
                         <h3 class="card-titre">La palette du goût</h3>
@@ -130,13 +140,18 @@
     </main>
     <!-- *** Footer *** -->
     <footer class="footer">
+        <!--logo-->
         <img class="footer-logo" src="assets/images/logo/ohmyfood.png" alt="petit logo de ohmyfood">
+        <!--liste-->
         <ul class="footer-liste">
+            <!--lien-->
             <li class="footer-item"><i class="footer-icon fa-solid fa-utensils"></i><a class="footer-lien"
                     href="#">Proposer un restaurant</a></li>
+                    <!--lien-->
             <li class="footer-item"><i class="footer-icon fa-solid fa-handshake-angle"></i><a class="footer-lien"
                     href="#">Devenir partenaires</a></li>
             <li class="footer-item"><a class="footer-lien" href="#">Mentions légales</a></li>
+            <!--lien vers boite mail-->
             <li class="footer-item"><a class="footer-lien" href="mailto:paul_cto@ohmyfood.com">Contact</a></li>
         </ul>
     </footer>

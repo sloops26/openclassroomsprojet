@@ -1,84 +1,69 @@
-  /******************** Media queries ********************/
-  /* Medium devices (tablets, less/equal than 1024px) */
+  /**MEDIA PAGE DACCUEIL**/
+  /* media queries tablette ecran min 768 max 1024px */
   @media screen and (min-width: 768px) {
     .tuto {
-      width: 100%;
+      width: 100%;/*aggrandissemnt des boutons fonctionnement avec lecran*/
     }
+
   }
-  /* Big devices (Desktop, more than 1024px) */
+  /* media queries desktop ecran min 1024px */
   @media screen and (min-width: 1024px) {
     .logo{
-        padding: 35px 89px 13px 89px;
+        padding: 35px 89px 13px 89px;/*aggrandissement div blanc du logo*/
     }
     .fonctionnement {
-      padding: 50px clamp(2px, 5%, 180px);
+      padding: 50px clamp(2px, 5%, 180px);/*espacement div fonctionnement*/
     }
     .tuto {
-      flex-direction: row;
+      flex-direction: row;/*positionnement bouton fonctionnment en ligne*/
     }
     .restaurant {
-      padding: 0px 180px;
+      padding: 0px 180px;/*marge sur coté gauche et droite*/
       box-sizing: border-box;
     }
     .restaurant-conteneur {
       flex-direction: row;
-      flex-wrap: wrap;
-      gap: 50px 100px;
+      flex-wrap: wrap;/*Les éléments flexibles sont disposé sur plusieurs lignes*/
+      gap: 50px 100px;/*positionnement carte resto en ligne*/
       margin-bottom: 30px;
     }
     .restaurant-card {
-      width: calc(50% - 50px);
+      width: calc(50% - 50px);/*taille carte resto en fonction taille ecran*/
       max-width: none;
     }
-}
-  /* Big devices (Desktop, more than 1024px) */
-  @media screen and (min-width: 1024px) {
     .footer {
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row-reverse;/*positionnemnt du footer en sens opposé*/
       align-items: flex-end;
       height: 114px;
     }
     .footer-liste {
       gap: 20px;
-      display: flex;
+      display: flex;/*espacement texte et en ligne*/
       flex-direction: row;
     }
-  }
-  
-  /*MEDIA PAGE RESTAURANT */
-
-  /*media tablette*/
-@media screen and (min-width:768px) {
-  .menu {
-      width: 90%;
-
-  }
-}
-
-/* media ordinateur*/
-@media screen and (min-width: 1024px) {
-  .header-icon {
-      top: 30px;
+               /*****PAGE RESTAURANT**/
+    .header-icon {
+      top: 30px;/*positionnement retour page d'accueil*/
   }
 
   .resto-img {
-      height: 383px;
+      height: 383px;/*taille image*/
   }
 
   .resto-titre {
       width: auto;
-      align-self: center;
+      align-self: center;/*nom resto cnter*/
   }
 
   .resto-article {
-      max-width: 1025px;
+      max-width: 1025px;/*taille max carte*/
       width: 100%;
   }
 
   .resto-icon {
       position: absolute;
-      right: 326px;
+      right: 326px;/*positionnement du coeur */
       top: 39px;
   }
 
@@ -88,5 +73,15 @@
 
   .menu {
       width: 80%;
+  }
+}
+ 
+  /*MEDIA PAGE RESTAURANT */
+
+  /*media tablette*/
+@media screen and (min-width:768px) {
+  .menu {
+      width: 90%;
+
   }
 }

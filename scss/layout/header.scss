@@ -2,12 +2,12 @@
     width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column;/*colonne =recherche en dessous logo*/
   }
   .logo {
     display: flex;
     justify-content: center;
-    box-sizing: border-box;
+    box-sizing: border-box; /*logo center,ombre*/
     width: 100%;
     margin: 0;
     padding: 14px 89px 13px 89px;
@@ -15,44 +15,44 @@
   }
   .logo-img {
     display: flex;
-    padding: 0 19px 0 16px;
+    padding: 0 19px 0 16px;/*taille image*/
     width: 162px;
   }
   
   .location {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;/*sens direction ligne pour icon et ville*/
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-color-grey-2);
+    background-color: var(--bg-color-grey-2);/*fond gris*/
     height: 50px;
     box-sizing: border-box;
     margin: 0;
     width: 100%;
-    gap: 17px;
+    gap: 17px;/*espace entre icon et ville*/
   }
   .location-logo {
-    font-size: 16px;
+    font-size: 16px;/*taille icon*/
   }
   .location-ville {
     font-size: 16px;
     font-weight: 500;
-    line-height: normal;
-    outline: none;
-    border: none;
+    line-height: normal;/*hauteur de la boite de la ligne*/
+    outline: none;/*supprime style par default*/
+    border: none; /*ville=pas de fond couleur,pas de bordure*/
     background: none;
   }
-  
+  /*texte*/
   .explorer {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/*sens direction texte 1en dessous l'autre*/
     align-items: center;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color);/*fond couleur gris clair*/
   }
   .explorer-titre {
     font-size: 24px;
     font-weight: 700;
-    text-align: center;
+    text-align: center;/*taille emplacement reservez votre menu*/
     margin-top: 39px;
     width: 75%;
     padding: 2px 15px 15px 15px;
@@ -60,7 +60,7 @@
   .explorer-soustitre {
     font-size: 18px;
     font-weight: 300;
-    text-align: center;
+    text-align: center;/*taille emplacement couleur decouvrez des restaurants*/
     color: var(--bg-color-dark-grey);
     margin-bottom: 27px;
     width: 85%;

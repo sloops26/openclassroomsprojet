@@ -1,15 +1,14 @@
 .header-icon {
     position: absolute;
-    left: 25px;
+    left: 25px;/*positionnement icon*/
     top: 13px;
     font-size: 30px;
-    z-index: 3;
 }
 
 .resto {
     position: relative;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box;/*posionnement div menu resto image */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,15 +16,15 @@
 
 .resto-img {
     position: relative;
-    width: 100%;
+    width: 100%;/*positionnement image taille/adaptation de la taille */
     height: 275px;
     object-fit: cover;
-    align-self: stretch;
+    align-self: stretch;/*etirement de limage*/
 }
 
 .resto-article {
     width: 100%;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color);/*menu resto fond couleur,bord arrondi, sens direction colonne menu mobile*/
     position: relative;
     margin-top: -25px;
     border-top-left-radius: 25px;
@@ -39,7 +38,7 @@
     width: 70%;
     align-self: flex-start;
     font-family: "Shrikhand", sans-serif;
-    font-size: 28px;
+    font-size: 28px;/*positionnement ecriture nom resto*/
     font-weight: 400;
     padding-top: 32px;
     padding-left: 17px;
@@ -47,36 +46,35 @@
 
 .resto-icon {
     padding: 2px;
-    position: absolute;
+    position: absolute;/*positionnement*/
     right: 42px;
     top: 39px;
-    font-size: 28px;
-    z-index: 1;
     overflow: clip;
     opacity: 1;
     font-size: 22px;
-    -webkit-text-stroke: 2px var(--bg-color-dark-grey);
-    background: white;
+    -webkit-text-stroke: 2px var(--bg-color-dark-grey);/*epaisseur et couleur bord du coeur*/
+    background: white;/*couleur du bloc*/
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;/*couleur interieur du coeur*/
 }
+
 
 .resto-icon:hover {
     font-size: 22px;
-    animation: filling-heart 1.3s forwards;
+    animation: filling-heart 1.3s forwards;/*animation coeur violet forward=mettre l'animation sur pause sur la derniere image*/
 }
 
 @keyframes filling-heart {
     0% {
-        transform: scale(0.9);
-        -webkit-text-stroke: transparent;
-        -webkit-background-clip: text;
+        transform: scale(0.9);/*equivalent scalex(0.9)scaleY(0.9) reduction du coeur*/
+        -webkit-text-stroke: transparent;/*transparence bordure*/
+        -webkit-background-clip: text;/*la zone d'arriere plan s'etend dans le texte*/
         background-clip: text;
     }
 
     50% {
-        transform: scale(1.4);
+        transform: scale(1.4);/*aggrandissement*/
         background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
         opacity: 0.5;
         -webkit-text-stroke: transparent;
@@ -85,7 +83,7 @@
     }
 
     100% {
-        transform: scale(1);
+        transform: scale(1);/*taille dorigine*/
         background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
         opacity: 1;
         -webkit-text-stroke: transparent;
@@ -101,7 +99,7 @@
 .menu-titre {
     margin-top: 40px;
     width: 38px;
-    height: 27px;
+    height: 27px; /*positionnement entree plat dessert+ couleur et taille ligne en dessous*/
     font-size: 16px;
     font-weight: 300;
     margin-left: 17px;
@@ -118,26 +116,26 @@
 .card {
     display: flex;
     flex-direction: row;
-    height: 70px;
+    height: 70px;/*positionnement en ligne dans la boite du plat*/
     position: relative;
     margin-top: 12px;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-    transform: translateX(15px);
-    animation: appearance-card 3s;
+    animation: appearance-card 3s;/*animation appartion carte avec décalage*/
     animation-fill-mode: both;
 }
-.card:hover .checkicon {
-    animation: check 0.8s 0.1s forwards;
-  
-}
+@keyframes appearance-card {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-.card:hover .card-click {
-    transition: all 0.7s ease-in-out;
-    cursor: pointer;
-    width: 30px;
-    padding: 15px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
 
 
@@ -151,7 +149,7 @@
 
 .child3 {
     animation-delay: 600ms;
-}
+}                             /*delai apparition plat ouvreture de page*/
 
 .child4 {
     animation-delay: 800ms;
@@ -181,37 +179,57 @@
     animation-delay: 700ms;
 }
 
-
-
-
-@keyframes appearance-card {
+.card:hover .checkicon {
+    animation: check 0.8s 0.1s forwards; /*animation rotation icon*/
+  
+}
+@keyframes check {
     0% {
-        opacity: 0;
-        transform: translateY(20px);
+        transform: rotate(0deg);
     }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    to {   
+        transform: rotate(360deg);
     }
 
 }
+.checkicon {
+    color: white;
+    opacity: 1;/*icon blanc*/
+    font-size: 25px;
 
+}
+.card-click {
+    width: 0;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center; /*icon center dans carré*/
+    justify-content: center;
+    overflow: hidden;/*empeche licon de sortir*/
+    background-color: var(--bg-color-green);/*carré vert avec icon*/
+
+}
+
+.card:hover .card-click {
+    transition: all 0.7s ease-in-out;/*animation carré verte plus fluide*/
+    cursor: pointer;
+    width: 30px;
+    padding: 15px;
+}
 
 .card-menu {
     width: 20%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/*texte lun en dessous lautre*/
     padding: 15px;
-    flex-grow: 1;
+    flex-grow: 1;/*expension de l'element*/
 }
 
 .card-plat {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 500;/*plat*/
     margin-bottom: 5px;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    text-overflow: ellipsis;/*texte coupé ...*/
+    overflow: hidden;/*evite aux texte detre rogné*/
     white-space: nowrap;
 }
 
@@ -228,41 +246,11 @@
     margin-right: 15px;
     margin-bottom: 15px;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end;/*positionnement prix au debut */
     font-size: 15px;
     font-weight: 700;
-    right: 30px;
-    bottom: 18px;
 }
 
-.card-click {
-    width: 0;
-    border-radius: 0 15px 15px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: var(--bg-color-green);
-
-}
-
-
-.checkicon {
-    color: white;
-    opacity: 1;
-    font-size: 25px;
-
-}
-
-@keyframes check {
-    0% {
-        transform: rotate(0deg);
-    }
-    to {   
-        transform: rotate(360deg);
-    }
-
-}
 
 /*footer*/
 
@@ -270,3 +258,49 @@
     position: relative;
 }
 
+
+
+  /**MEDIA PAGE*/
+  /* media queries tablette ecran min 768 max 1024px */
+  @media screen and (min-width:768px) {
+    .menu {
+        width: 90%;
+  
+    }
+  }
+  /* media queries desktop ecran min 1024px */
+  @media screen and (min-width: 1024px) {
+   
+               /*****PAGE RESTAURANT**/
+    .header-icon {
+      top: 30px;/*positionnement retour page d'accueil*/
+  }
+
+  .resto-img {
+      height: 383px;/*taille image*/
+  }
+
+  .resto-titre {
+      width: auto;
+      align-self: center;/*nom resto cnter*/
+  }
+
+  .resto-article {
+      max-width: 1025px;/*taille max carte*/
+      width: 100%;
+  }
+
+  .resto-icon {
+      position: absolute;
+      right: 326px;/*positionnement du coeur */
+      top: 39px;
+  }
+
+  .resto .card {
+      width: 97%;
+  }
+
+  .menu {
+      width: 80%;
+  }
+}
