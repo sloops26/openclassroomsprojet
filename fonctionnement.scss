@@ -1,0 +1,59 @@
+  
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;/*sens de direction colonne*/
+  }
+  .fonctionnement-titre {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 48px;/* taille;emplacement du titre*/
+    margin-left: 20px;
+    margin-bottom: 26px;
+  }
+  .tuto {
+    display: flex;
+    flex-direction: column;/* emplacement des boutons colonne pour mobile*/ 
+    align-items: center;
+    gap: 25px;/* espacement entre chaque bouton*/
+    margin-bottom: 68px;
+  }
+  .conteneur {
+    width: 80%;/*taille et position des boutons*/
+    position: relative;
+  }
+  .badge {
+    position: absolute;
+    top: 25px;/*positionnement du cercle sur le bouton*/
+    left: -12px;
+    z-index: 1;/*postionnement en fond*/
+  }
+  .chiffre {
+    position: absolute;
+    left: -5px;/*posiutionnement du chiffre dans le badge*/
+    bottom: 26px;
+    color: white;
+    z-index: 2;/*postionnement au dessus du badge*/
+  }
+  .fonctionnement-bouton {
+    display: flex;
+    justify-content: center;/*texte icon center dans bouton*/
+    align-items: center;
+    gap: 27px;/*espacement entre texte ety icon*/
+    position: relative;
+    border-radius: 20px;/*arrondi*/
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);/*ombre*/
+    background-color: var(--main-bg-color);/*fond couleur*/
+    height: 73px;
+    width: 100%;
+    min-width: 123px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .icon {
+    color: #7e7e7e;/*couleur icon*/
+  }
+  .icon:hover {
+    color:rgb(107, 51, 177);/*changement couleur passage souris*/
+    cursor:pointer;
+  }
