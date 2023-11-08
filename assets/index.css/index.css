@@ -188,8 +188,8 @@ body {
   /*couleur icon*/ }
 
 .icon:hover {
-  color: #9356dc;
-  /*changement couleur passage souris*/ }
+    color:rgb(107, 51, 177);/*changement couleur passage souris*/
+    cursor:pointer; }
 
 /*page d'accueil cartes restaurants*/
 .restaurant {
