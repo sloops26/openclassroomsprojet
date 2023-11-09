@@ -187,9 +187,12 @@ body {
   color: #7e7e7e;
   /*couleur icon*/ }
 
-.icon:hover {
-    color:rgb(107, 51, 177);/*changement couleur passage souris*/
-    cursor:pointer; }
+.conteneur:hover {
+  cursor: pointer; }
+
+.conteneur:hover .icon {
+  color: #6b33b1;
+  /*changement couleur passage souris*/ }
 
 /*page d'accueil cartes restaurants*/
 .restaurant {

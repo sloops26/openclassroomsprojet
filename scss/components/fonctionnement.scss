@@ -53,7 +53,9 @@
   .icon {
     color: #7e7e7e;/*couleur icon*/
   }
-  .icon:hover {
-    color:rgb(107, 51, 177);/*changement couleur passage souris*/
-    cursor:pointer;
-  }
+ .conteneur:hover{
+  cursor: pointer;
+ } 
+.conteneur:hover .icon {
+  color:rgb(107, 51, 177);/*changement couleur passage souris*/
+}
